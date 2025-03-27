@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { useForm } from '@formspree/react';
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 
 function Booking() {
@@ -52,7 +53,7 @@ function Booking() {
 
 
   return (
-    <main>
+    <Suspense>
       <h2 className="-mx-[6.80%] font-poppins tracking-[0.125em] text-center py-7 bg-gradient-to-tr from-[#3F2136] to-[#AC117D] text-[#E3E4DB] font-[600] text-4xl max-md:text-3xl max-sm:text-2xl">Booking</h2>
       <p className="text-xs text-center mt-10 text-[#A2A2A2]">*All Fields Are Required</p>
 
@@ -109,7 +110,7 @@ function Booking() {
           <p className="font-poppins text-[#2A2B2A]/80 text-center text-base">Thank you for booking our service <b className="text-[#2A2B2A]/95">{name}</b>! We truly appreciate your trust. Our team will review your request and contact you shortly to confirm the details and ensure a smooth experience.</p>
         </article>
       </section>
-    </main>
+    </Suspense>
   )
 }
 
