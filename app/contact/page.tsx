@@ -1,39 +1,13 @@
 "use client"
 import Image from "next/image";
-// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
-import  { LatLngExpression, Icon } from "leaflet";
 import Link from "next/link";
 import dynamic from 'next/dynamic'
-// import { useEffect, useState } from "react";
  
-const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
-const TileLayer = dynamic(() => import("react-leaflet").then((mod) => mod.TileLayer), { ssr: false });
-const Marker = dynamic(() => import("react-leaflet").then((mod) => mod.Marker), { ssr: false });
-const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), { ssr: false });
-
-// const L = dynamic(() => import("leaflet").then((mod) => mod.default), { ssr: false });
+const Map = dynamic(() => import("@/components/map"), { ssr: false });
 
 
 function Contact() {
    
-  // const [L, setL] = useState<any>();
-
-  // useEffect(() => {
-  //   import("leaflet").then((leaflet) => setL(leaflet));
-  // }, []);
-
-  const position: LatLngExpression = [6.619307804140776, 3.5595638092519715];  
-
-  const customIcon = new Icon({
-    iconUrl: "/logo/marislogo.png", 
-    iconSize: [30, 29], 
-    iconAnchor: [12, 30], 
-    popupAnchor: [1, -34], 
-    shadowUrl: "/svgs/marker-shadow.png", 
-    shadowSize: [41, 41],
-  });
-
   return (
     <main>
       <h2 className="-mx-[6.80%] font-poppins tracking-[0.125em] text-center py-7 bg-gradient-to-tr from-[#3F2136] to-[#AC117D] text-[#E3E4DB] font-[600] text-4xl max-md:text-3xl max-sm:text-2xl">Contact & Location</h2>
@@ -74,14 +48,7 @@ function Contact() {
         </aside>
 
         <aside className="w-[45%] max-md:w-[47%] max-sm:w-full max-sm:aspect-[1.618] rounded-lg border-[2px] border-[#2A2B2A]/70 z-[10]">
-          {/* <MapContainer center={position} zoom={15} className="h-full w-full rounded-lg">
-            <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={position} icon={customIcon}>
-              <Popup>We are here!</Popup>
-            </Marker>
-          </MapContainer> */}
+          <Map/>
         </aside>
       </section>
 
