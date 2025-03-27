@@ -2,10 +2,10 @@
 import Image from "next/image";
 // import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import  { LatLngExpression } from "leaflet";
+import  { LatLngExpression, Icon } from "leaflet";
 import Link from "next/link";
 import dynamic from 'next/dynamic'
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
  
 const MapContainer = dynamic(() => import("react-leaflet").then((mod) => mod.MapContainer), { ssr: false });
 const TileLayer = dynamic(() => import("react-leaflet").then((mod) => mod.TileLayer), { ssr: false });
@@ -16,16 +16,16 @@ const Popup = dynamic(() => import("react-leaflet").then((mod) => mod.Popup), { 
 
 
 function Contact() {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const [L, setL] = useState<any>();
+   
+  // const [L, setL] = useState<any>();
 
-  useEffect(() => {
-    import("leaflet").then((leaflet) => setL(leaflet));
-  }, []);
+  // useEffect(() => {
+  //   import("leaflet").then((leaflet) => setL(leaflet));
+  // }, []);
 
   const position: LatLngExpression = [6.619307804140776, 3.5595638092519715];  
 
-  const customIcon = new L.Icon({
+  const customIcon = new Icon({
     iconUrl: "/logo/marislogo.png", 
     iconSize: [30, 29], 
     iconAnchor: [12, 30], 
