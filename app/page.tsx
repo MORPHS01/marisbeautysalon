@@ -33,6 +33,17 @@ export default function Home() {
         </div>
       </aside>
 
+      <section className="flex items-center justify-between max-md:flex-col max-md:gap-14 mt-5 mb-[70px]">
+        <div className="flex flex-col gap-[20px] w-[47%] xl:w-[40%] max-sm:text-center max-md:w-full">
+          <p className="font-poppins font-[600] text-4xl max-md:text-3xl max-sm:text-xl text-[#2A2B2A]">Timeless <span className="text-[#F900AD]">Beauty</span> & Expertise: 22 <span className="text-[#F900AD]">Years</span> of Mastery</p>
+          <p className="text-base text-[#50514E]">With over 22 years of experience in the hairstyling and beauty industry, I, Maria Atoyebi, have honed my skills to perfection, delivering exceptional services with precision, creativity, and passion. Every client receives personalized care, ensuring elegance and confidence.</p>
+        </div>
+
+        <div className="w-[50%] max-md:w-[75%] max-sm:w-[90%] rounded-xl">
+          <Image src="/image/maria-photoshoot.jpg" alt="maria" className="z-[10] rounded-xl" width={579} height={431}/>
+        </div>
+      </section>
+
       <article className="flex flex-col items-center text-center gap-[20px] mb-[110px]">
         <p className="font-poppins font-[600] text-4xl max-md:text-3xl max-sm:text-xl text-[#2A2B2A]">Get in <span className="text-[#F900AD]">Touch</span> & Find Us <span className="text-[#F900AD]">with</span> Ease</p>
         <p className="text-base text-[#50514E]">We&apos;re here to bring beauty closer to you! Visit us at our salon for a premium experience, or reach out for inquiries, appointments, and special requests. Our location is easy to find, and our team is always ready to assist you. Let&apos;s connect today!</p>
