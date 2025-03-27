@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins, Kaushan_Script, Alex_Brush } from "next/font/google";
 import { Header, Footer } from "@/components/index";
+import { Suspense } from "react";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -45,10 +46,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${kaushan_Script.variable} ${alex_Brush.variable} antialiased overflow-x-hidden bg-[#E3E4DB] text-[#2A2B2A] min-h-screen flex flex-col justify-between`}>
-        <main>
+        <Suspense>
           <Header/>
           <main className="pt-0 pb-20 px-[6%]">{children}</main>
-        </main>
+        </Suspense>
 
         <Footer/>
       </body>
