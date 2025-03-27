@@ -94,10 +94,10 @@ function Booking() {
       </form>
 
 
-      <section className={`fixed left-0 top-0 w-full h-full transition-all duration-500 ease-in-out ${modal ? "translate-y-0" : "translate-y-full"}`}>
-        <div className="fixed left-0 top-0 cursor-pointer bg-black/30 backdrop-blur-sm w-full h-full" onClick={resetAll}/>
+      <section className={`fixed z-[10000] left-0 top-0 w-full h-full transition-all duration-500 ease-in-out ${modal ? "translate-y-0" : "translate-y-full"}`}>
+        <div className="fixed z-[10000] left-0 top-0 cursor-pointer bg-black/30 backdrop-blur-sm w-full h-full" onClick={resetAll}/>
 
-        <article className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#E3E4D8] p-8 max-sm:p-6 rounded-[8px] flex flex-col items-center gap-8 max-sm:gap-6 w-full max-w-[min(calc(100vw_-_40px),_420px)] z-30 transition-all duration-300 opacity-100 visible">
+        <article className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#E3E4D8] p-8 max-sm:p-6 rounded-[8px] flex flex-col items-center gap-8 max-sm:gap-6 w-full max-w-[min(calc(100vw_-_40px),_420px)] z-[100000] transition-all duration-300 opacity-100 visible">
           <div className="flex justify-between items-center w-full">
             <div className="flex items-center justify-center gap-[7px]">
               <Image src="/logo/marislogo.png" alt="logo" height={35} width={35} className="w-[30px] max-md:w-[25px]"/>
