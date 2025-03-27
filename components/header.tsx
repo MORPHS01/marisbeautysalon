@@ -44,7 +44,7 @@ function Header() {
 
 
   return (
-    <header className={`px-[6%] py-[30px] flex justify-between z-[1000] bg-[#E3E4DB]/85 transition-all duration-200 ease-in-out ${isScrolled && "sticky top-0 shadow-lg backdrop-blur-[85px]"}`}>
+    <header className={`px-[6%] py-[30px] flex justify-between z-[1000] bg-[#E3E4DB]/85 transition-all duration-200 ease-in-out ${isScrolled && "md:sticky md:top-0 md:shadow-lg md:backdrop-blur-[85px]"}`}>
       <Link href="/" className="flex items-center justify-center gap-[7px]">
         <Image src="/logo/marislogo.png" alt="logo" height={35} width={35} className="w-[35px] max-md:w-[27px]"/>
         <p className="font-poppins text-2xl max-lg:text-xl max-sm:text-lg">maris beauty salon</p>
