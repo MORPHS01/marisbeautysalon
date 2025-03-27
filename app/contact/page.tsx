@@ -74,14 +74,14 @@ function Contact() {
         </aside>
 
         <aside className="w-[45%] max-md:w-[47%] max-sm:w-full max-sm:aspect-[1.618] rounded-lg border-[2px] border-[#2A2B2A]/70 z-[10]">
-          <MapContainer center={position} zoom={15} className="h-full w-full rounded-lg">
+          {/* <MapContainer center={position} zoom={15} className="h-full w-full rounded-lg">
             <TileLayer
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             <Marker position={position} icon={customIcon}>
               <Popup>We are here!</Popup>
             </Marker>
-          </MapContainer>
+          </MapContainer> */}
         </aside>
       </section>
 
